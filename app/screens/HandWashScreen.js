@@ -9,7 +9,7 @@ const HandWashScreen = () => (
     <Text style={styles.textContainer}>Hand Wash Timer</Text>
     <View style={styles.interactionContainer}>
       <View style={styles.handWashContainer}>
-        <HandWashComponent defaultDelay={200} />
+        <HandWashComponent />
       </View>
       <View style={styles.shiftContainer}>
         <ShiftController />

@@ -4,7 +4,7 @@ import shift from './shiftSlice'
 
 const reducer = combineReducers({
   handWashes: handWash.reducer,
-  shift: shift.reducer,
+  shifts: shift.reducer,
 })
 
 export default reducer

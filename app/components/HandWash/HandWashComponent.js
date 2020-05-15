@@ -47,7 +47,12 @@ const HandWashComponent = ({ defaultDelay = 1000, defaultTimeout = 20 }) => {
   return (
     <View>
       <Text>Please press the button below to start the timer</Text>
-      <Button onPress={onUserPressButton} testID="timer-button" title="Timer" />
+      <Button
+        onPress={onUserPressButton}
+        testID="timer-button"
+        title="Timer"
+        disabled={timerCount > 0}
+      />
       <Text testID="timer-counter">{timerCount}</Text>
     </View>
   )

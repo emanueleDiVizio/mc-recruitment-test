@@ -1,17 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit'
-
+import moment from 'moment'
 const shiftSlice = createSlice({
-  name: 'shift',
-  initialState: { onShift: false },
+  name: 'shifts',
+  initialState: [],
   reducers: {
-    startShift: state => ({
+    startShift: state => [
       ...state,
-      onShift: true,
-    }),
-    endShift: state => ({
-      ...state,
-      onShift: false,
-    }),
+      {
+        endTime: moment()
+          .add(8, 'h')
+          .valueOf(),
+      },
+    ],
   },
 })
 

@@ -1,28 +1,43 @@
 import PushNotificationIOS from '@react-native-community/push-notification-ios'
 import PushNotification from 'react-native-push-notification'
+import {Platform} from 'react-native'
+class NotificationService {
+  setUpService = onNotificationCb => {
+    if (!this.isSetUp) {
+      PushNotification.configure({
+        onNotification: notification => {
+          if (onNotificationCb) {
+            onNotificationCb(notification)
+          }
+          notification.finish(PushNotificationIOS.FetchResult.NoData)
+        },
+        permissions: {
+          alert: true,
+          badge: true,
+          sound: true,
+        },
+        requestPermissions: Platform.OS === 'ios',
+        popInitialNotification: true,
+      })
+      this.isSetUp = true
+    }
+  }
 
-const setUpService = onNotificationCb => {
-  PushNotification.configure({
-    onNotification: function(notification) {
-      onNotificationCb(notification)
-      notification.finish(PushNotificationIOS.FetchResult.NoData)
-    },
+  tearDownService = () => {
+    this.isSetUp = false
+  }
 
-    permissions: {
-      alert: true,
-      badge: true,
-      sound: true,
-    },
-    popInitialNotification: true,
-  })
+  scheduleNotification = (title, message, date) => {
+    if (this.isSetUp) {
+      PushNotification.localNotificationSchedule({
+        title,
+        message,
+        date,
+      })
+    }
+  }
 }
 
-const scheduleNotification = (title, message, date) => {
-  PushNotification.localNotificationSchedule({
-    title,
-    message,
-    date,
-  })
-}
+const service = new NotificationService()
 
-export default { setUpService, scheduleNotification }
+export default service
