@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HandWashComponent initializes correctly 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Please press the button below to start the timer
+      </Text>
+      <Button
+        disabled={false}
+        testID="timer-button"
+        title="Timer"
+      />
+      <Text
+        testID="timer-counter"
+      >
+        0
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HandWashComponent starts the timer when button is pressed and updates with elapsed time 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Please press the button below to start the timer
+      </Text>
+      <Button
+        disabled={true}
+        testID="timer-button"
+        title="Timer"
+      />
+      <Text
+        testID="timer-counter"
+      >
+        10
+      </Text>
+    </View>
+  </View>
+</View>
+`;
