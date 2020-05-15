@@ -122,8 +122,6 @@ Global app config is in `app/config/index.js`. There are some defaults which are
 
 ## Redux
 
-**TODO** Setup redux
-
 Our typical redux setup would be done in `config/store.js`. This would setup the redux store, add middleware (such as redux-saga and redux-persist).
 
 We would then add the react-redux `Provider` to `app/App.js`.
@@ -149,7 +147,7 @@ We use `prettier` for code formatting.
 
 # Build & Deploy
 
-I haven't implemented a deploy step as it's quite cumbersome to set up keys for Android and iOs store release, and it is not necessary for the sake of the test, as running `yarn android` and `yarn ios` produces dev build artifacts already. However, these guide would need to be followed to perform a signed release build (https://reactnative.dev/docs/running-on-device.html#building-your-app-for-production). A debug build is also present as an artifact on Github Actions pipeline.
+I haven't implemented a deploy step as it's quite cumbersome to set up keys for Android and iOs store release, and it is not necessary for the sake of the test, as running `yarn android` and `yarn ios` produces dev build artifacts already. However, these guide would need to be followed to perform a signed release build (https://reactnative.dev/docs/running-on-device.html#building-your-app-for-production). A debug Android build is also present as an artifact on Github Actions pipeline.
 
 ## iOS
 

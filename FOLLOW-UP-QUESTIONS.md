@@ -23,7 +23,7 @@ Run `yarn android` or `yarn ios` and you're good to go (Provided you've set up d
 
 ### Q) If you had more time, what further improvements or new features would you add?
 
-I Would improve the UX/UI and would add tests for sagas and NotificationService. Although not crucial, they're useful to add if there is time to spare. I would also set up `husky` to run tests and lint on commit and push. I would then set up a proper CI pipeline to have an easier access to artifacts. As time has been quite tight, I've decided to deliver the project only with the strict necessary.
+I Would improve the UX/UI and would add tests for sagas and NotificationService. Although not crucial, they're useful to add if there is time to spare. I would also set up `husky` to run tests and lint on commit and push. I would then set up a `fastlane` pipeline for Android and iOs build that can be also used on GitHub CI. As time has been quite tight, I've decided to deliver the project only with the strict necessary.
 
 ### Q) Which parts are you most proud of? And why?
 
@@ -40,4 +40,4 @@ Even though the requirements are simple, the candidate will have to be familiar 
 
 All in all, a senior engineer will have no problem completing this quickly, while a less experienced developer will struggle with some concepts (sagas, hooks, testing, architecture) and would likely need more time to piece all together.
 
-On a side note, I'd be wary of separating components bewteen "dumb components" and "smart screens" as of these days is very easy to make small functional components redux-aware through hooks, as I've demonstrated in this project. Also, I've decide to place test specs next to the file being tested, instead of keeping them all in the `__tests__` folder. Just a personal preference, yet I find it keeps thing easier to reference.
+On a side note, I'd be wary of separating components between "dumb components" and "smart screens" as of these days is very easy to make small functional components redux-aware through hooks, as I've demonstrated in this project. Also, I've decide to place test specs next to the file being tested, instead of keeping them all in the `__tests__` folder. Just a personal preference, yet I find it keeps thing easier to reference.
