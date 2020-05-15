@@ -1,16 +1,13 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+
+import { Provider } from 'react-redux'
+import createStore from './config/store'
+import HandWashScreen from './screens/HandWashScreen'
+
+const store = createStore()
 
 export default () => (
-  <View style={styles.container}>
-    <Text>Hand Wash Timer</Text>
-  </View>
+  <Provider store={store}>
+    <HandWashScreen />
+  </Provider>
 )
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
