@@ -1,6 +1,6 @@
 import PushNotificationIOS from '@react-native-community/push-notification-ios'
 import PushNotification from 'react-native-push-notification'
-import {Platform} from 'react-native'
+import { Platform } from 'react-native'
 class NotificationService {
   setUpService = onNotificationCb => {
     if (!this.isSetUp) {
