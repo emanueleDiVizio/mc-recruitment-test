@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 
 import { Provider } from 'react-redux'
-import createStore from './config/store'
+import { store, persistor } from './config/store'
 import HandWashScreen from './screens/HandWashScreen'
 import notificationService from './services/NotificationService'
-const store = createStore()
+import { PersistGate } from 'redux-persist/integration/react'
 
 const App = () => {
   useEffect(() => {
@@ -16,7 +16,9 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <HandWashScreen />
+      <PersistGate loading={null} persistor={persistor}>
+        <HandWashScreen />
+      </PersistGate>
     </Provider>
   )
 }
