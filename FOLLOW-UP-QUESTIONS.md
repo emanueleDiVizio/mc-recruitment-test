@@ -23,7 +23,7 @@ Run `yarn android` or `yarn ios` and you're good to go (Provided you've set up d
 
 ### Q) If you had more time, what further improvements or new features would you add?
 
-I Would improve the UX/UI and would add tests for sagas and NotificationService. Although not crucial, they're useful to add if there is time to spare. I would also set up `husky` to run tests and lint on commit and push. I would then set up a `fastlane` pipeline for Android and iOs build that can be also used on GitHub CI. As time has been quite tight, I've decided to deliver the project only with the strict necessary.
+I Would improve the UX/UI and would add tests for sagas and NotificationService. Although not crucial, they're useful to add if there is time to spare. I would also set up `husky` to run tests and lint on commit and push. I would then set up a `fastlane` pipeline for Android and iOs build that can be also used on GitHub CI. From a functionality perspective, I'd let the user exit the shift before end time, clear handwash history and enable/disable notification through settings. I'd also let the user configure some of the settings in `config` through UI. As time has been quite tight, I've decided to deliver the project only with the strict necessary.
 
 ### Q) Which parts are you most proud of? And why?
 
