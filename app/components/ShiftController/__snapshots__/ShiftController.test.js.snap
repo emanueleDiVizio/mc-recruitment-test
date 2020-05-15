@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HandWashComponent dispatches \`startShift\` action when user presses button 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours
+      </Text>
+      <Button
+        testID="shift-button"
+        title="Start shift"
+      />
+      <Text>
+        Shift status: 
+        OFF
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HandWashComponent renders correctly when off shift 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours
+      </Text>
+      <Button
+        testID="shift-button"
+        title="Start shift"
+      />
+      <Text>
+        Shift status: 
+        OFF
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`HandWashComponent renders correctly when on shift 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <Text>
+        Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours
+      </Text>
+      <Button
+        testID="shift-button"
+        title="Start shift"
+      />
+      <Text>
+        Shift status: 
+        ON
+      </Text>
+    </View>
+  </View>
+</View>
+`;
