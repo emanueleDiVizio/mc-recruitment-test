@@ -2,22 +2,23 @@
 
 Thanks for taking the time to do our front-end / full-stack coding test. The challenge has two parts:
 
-* a task to create a basic app that will allow people to track their hand washing, keep a history of their hand washing and when needed receive regular reminders to wash their hands.
-* some follow-up questions
+- a task to create a basic app that will allow people to track their hand washing, keep a history of their hand washing and when needed receive regular reminders to wash their hands.
+- some follow-up questions
 
 You will be graded based on the following have been met:
 
-* Your implementation works as described in the task.
+- Your implementation works as described in the task.
 
 ## Task
+
 ### Approach
 
 Mobile app on iOS and Android using React Native. The app will need to:
 
-* Persist the users hand washing history locally on the device
-* Ask for permission to send push notifications
-* Send local push notifications
-* Have an animated count down timer to help them as they wash their hands
+- Persist the users hand washing history locally on the device
+- Ask for permission to send push notifications
+- Send local push notifications
+- Have an animated count down timer to help them as they wash their hands
 
 The base project is available in this repo and we want you to fork this repo.
 
@@ -25,10 +26,10 @@ The base project is available in this repo and we want you to fork this repo.
 
 Feel free to spend as much or as little time on the exercise as you like as long as the following requirements have been met.
 
-* Please complete the user stories below.
-* Your code should run in one step.
-* We'd like you to use React Native. On top of that, use whatever front-end libraries you feel comfortable with.
-* You must include tests
+- Please complete the user stories below.
+- Your code should run in one step.
+- We'd like you to use React Native. On top of that, use whatever front-end libraries you feel comfortable with.
+- You must include tests
 
 ### User Stories
 
@@ -42,8 +43,7 @@ As a user I want to get reminders every 2 hours when on shift
 
 Design assets are available as a Sketch file via Sketch Cloud - https://www.sketch.com/s/nq8e4
 
-Please do not spend a lot of time on styling as this is not the key part of the assessment, and you will not be penalised for basic styles. 
-
+Please do not spend a lot of time on styling as this is not the key part of the assessment, and you will not be penalised for basic styles.
 
 ## Submission Guidelines
 
@@ -70,9 +70,9 @@ react-native repo for the Medic Bleep Hand Wash Timer mobile app
 3. Make sure you've installed xcode and opened it to accept terms etc
 4. Install js dependencies: `yarn install`
 5. Install native dependencies: `cd ios && pod install`
-5. Create `app/config/local.js` - local dev config that isn't committed.
-6. Start the js bundler: `react-native start`
-7. Run the project: `react-native run-ios`
+6. Create `app/config/local.js` - local dev config that isn't committed.
+7. Start the js bundler: `react-native start`
+8. Run the project: `react-native run-ios`
 
 ## Running the app locally - Android
 
@@ -89,17 +89,16 @@ We're using `redux` for state management and `redux-saga` for asynchronous actio
 
 The bulk of the code is in the `app` directory.
 
-| location       | contents                                                                                                               |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| app/App.js     | Entrypoint for the app                                                                                                 |
-| app/components | lower level components, e.g. buttons                                                                                   |
-| app/screens    | components representing entire screens within the app, where integration with redux would happen                       |
+| location       | contents                                                                                                                     |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| app/App.js     | Entrypoint for the app                                                                                                       |
+| app/components | Place to keep both smart and dumb components.                                                                                         |
+| app/screens    | components representing entire screens within the app, where smaller component are pieced together.                         |
 | app/config     | app-wide config - things like an api host, colors, etc. Configuration of the redux store and, in dev, tools like Reactotron. |
-| app/state      | redux reducers/actions/selectors. Combined in `index.js`                                                               |
-| app/sagas      | `redux-saga` sagas, forked from the root saga in `index.js` to run in parallel.                                        |
-| \_\_tests\_\_/ | Tests, using [Jest](https://jestjs.io/)                                                                                |
-| ios/           | Native iOS project
-| android/       | Native Android project
+| app/state      | redux reducers/actions/selectors. Combined in `index.js`                                                                     |
+| app/sagas      | `redux-saga` sagas, forked from the root saga in `index.js` to run in parallel.                                              |
+| ios/           | Native iOS project                                                                                                           |
+| android/       | Native Android project                                                                                                       |
 
 ## Config
 
@@ -111,12 +110,15 @@ Global app config is in `app/config/index.js`. There are some defaults which are
 
 #### Possible config values
 
-**TODO** Update these as config values are established
-
-| value              | purpose                                                                |
-| ------------------ | ---------------------------------------------------------------------- |
-| `colors`           | The colors used throughout the app
-| `storybookEnabled` | Should storybook run? (not currently implemented)
+| value                                | purpose                                                           |
+| ------------------------------------ | ----------------------------------------------------------------- |
+| `colors`                             | The colors used throughout the app                                |
+| `storybookEnabled`                   | Should storybook run? (not currently implemented)                 |
+| `defaultTimerDelay`                  | Default delay for the handwash timer (1s)                         |
+| `defaultTimerTimeoutInSeconds`       | Default timeout for handwash timer (20s as recommended by medics) |
+| `defaultShiftDurationInHours`        | Default user shift duration (8 hrs)                               |
+| `defaultDateFormatString`            | Default formatter to show dates (`dddd, MMMM Do YYYY, h:mm:ss a)  |
+| `defaultNotificationIntervalInHours` | Default interval between notifications (2 hrs)                    |
 
 ## Redux
 
@@ -127,6 +129,7 @@ Our typical redux setup would be done in `config/store.js`. This would setup the
 We would then add the react-redux `Provider` to `app/App.js`.
 
 We have included `@reduxjs/toolkit` which speeds up development by allowing us to abstract away most of the typical boilerplate code associated with setting up and using redux. For example:
+
 - Includes a convenience function for configuring the store
 - Has the concept of a `slice` which incorporates reducers and action creators
 
@@ -134,7 +137,7 @@ It's worth reading through the [toolkit docs](https://redux-toolkit.js.org/) for
 
 ## Dev Tools
 
-#TODO
+I've used `redux-devtools-extension` for dev tools. Good enough for simple cases and less complex than Reactotron. However, in most real world scenarios I'd set up Reactotron.
 
 ## Tests
 
@@ -146,10 +149,12 @@ We use `prettier` for code formatting.
 
 # Build & Deploy
 
+I haven't implemented a deploy step as it's quite cumbersome to set up keys for Android and iOs store release, and it is not necessary for the sake of the test, as running `yarn android` and `yarn ios` produces dev build artifacts already. However, these guide would need to be followed to perform a signed release build (https://reactnative.dev/docs/running-on-device.html#building-your-app-for-production). A debug build is also present as an artifact on Github Actions pipeline.
+
 ## iOS
 
-**TODO** document how to deploy
+Open the simulator and run `yarn ios`, the app will install automatically.
 
 ## Android
 
-**TODO** document how to deploy
+Open the emulator and run `yarn android`, the app will install automatically.
