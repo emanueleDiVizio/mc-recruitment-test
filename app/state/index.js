@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import handWash from './handWashSlice'
 
 const reducer = combineReducers({
-  handWash: handWash.reducer,
+  handWashes: handWash.reducer,
 })
 
 export default reducer

@@ -24,9 +24,8 @@ exports[`HandWashComponent initializes correctly 1`] = `
       </Text>
       <Button
         testID="timer-button"
-      >
-        Timer
-      </Button>
+        title="Timer"
+      />
       <Text
         testID="timer-counter"
       >
@@ -37,7 +36,7 @@ exports[`HandWashComponent initializes correctly 1`] = `
 </View>
 `;
 
-exports[`HandWashComponent starts the timer when button is pressed and shows elapsed time when finished 1`] = `
+exports[`HandWashComponent starts the timer when button is pressed and updates with elapsed time 1`] = `
 <View
   pointerEvents="box-none"
   style={
@@ -61,13 +60,12 @@ exports[`HandWashComponent starts the timer when button is pressed and shows ela
       </Text>
       <Button
         testID="timer-button"
-      >
-        Timer
-      </Button>
+        title="Timer"
+      />
       <Text
         testID="timer-counter"
       >
-        20
+        10
       </Text>
     </View>
   </View>

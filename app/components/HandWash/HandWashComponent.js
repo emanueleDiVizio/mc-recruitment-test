@@ -24,6 +24,8 @@ const HandWashComponent = ({ defaultDelay = 1000, defaultTimeout = 20 }) => {
 
   const onHandWashCompleted = () => {
     dispatch(handWash.actions.addHandWash())
+    setTimerCount(0)
+    setHandWashCompleted(false)
   }
 
   useEffect(() => {

@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HandWashComponent renders correctly fetching data from store 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View>
+      <ScrollView
+        data={
+          Array [
+            Object {
+              "endTime": 1589532292430,
+            },
+            Object {
+              "endTime": 1589532322793,
+            },
+            Object {
+              "endTime": 1589532333570,
+            },
+          ]
+        }
+        disableVirtualization={false}
+        horizontal={false}
+        initialNumToRender={10}
+        maxToRenderPerBatch={10}
+        onEndReachedThreshold={2}
+        removeClippedSubviews={false}
+        scrollEventThrottle={50}
+        stickyHeaderIndices={Array []}
+        updateCellsBatchingPeriod={50}
+        viewabilityConfigCallbackPairs={Array []}
+        windowSize={21}
+      >
+        <View
+          style={null}
+        >
+          <View>
+            <Text>
+              Handwash completed on 
+              Fri May 15 2020 10:44:52 GMT+0200 (Central European Summer Time)
+            </Text>
+          </View>
+        </View>
+        <View
+          style={null}
+        >
+          <View>
+            <Text>
+              Handwash completed on 
+              Fri May 15 2020 10:45:22 GMT+0200 (Central European Summer Time)
+            </Text>
+          </View>
+        </View>
+        <View
+          style={null}
+        >
+          <View>
+            <Text>
+              Handwash completed on 
+              Fri May 15 2020 10:45:33 GMT+0200 (Central European Summer Time)
+            </Text>
+          </View>
+        </View>
+      </ScrollView>
+    </View>
+  </View>
+</View>
+`;
