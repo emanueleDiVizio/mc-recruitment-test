@@ -6,16 +6,16 @@ import ShiftController from '../components/ShiftController/ShiftController'
 
 const HandWashScreen = () => (
   <View style={styles.container}>
-    <Text style={{ flex: 1 }}>Hand Wash Timer</Text>
-    <View style={{ flex: 1, flexDirection: 'row' }}>
-      <View style={{ flex: 1, margin: 16 }}>
+    <Text style={styles.textContainer}>Hand Wash Timer</Text>
+    <View style={styles.interactionContainer}>
+      <View style={styles.handWashContainer}>
         <HandWashComponent defaultDelay={200} />
       </View>
-      <View style={{ flex: 1, margin: 16 }}>
+      <View style={styles.shiftContainer}>
         <ShiftController />
       </View>
     </View>
-    <View style={{ flex: 1 }}>
+    <View style={styles.handWashContainer}>
       <HandWashHistory />
     </View>
   </View>
@@ -27,6 +27,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  textContainer: { flex: 1 },
+  interactionContainer: { flex: 1, flexDirection: 'row' },
+  handWashContainer: { flex: 1, margin: 16 },
+  shiftContainer: { flex: 1, margin: 16 },
+  historyContainer: { flex: 1 },
 })
 
 export default HandWashScreen
