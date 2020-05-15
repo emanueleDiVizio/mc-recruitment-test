@@ -23,6 +23,7 @@ exports[`HandWashComponent initializes correctly 1`] = `
         Please press the button below to start the timer
       </Text>
       <Button
+        disabled={false}
         testID="timer-button"
         title="Timer"
       />
@@ -59,6 +60,7 @@ exports[`HandWashComponent starts the timer when button is pressed and updates w
         Please press the button below to start the timer
       </Text>
       <Button
+        disabled={true}
         testID="timer-button"
         title="Timer"
       />

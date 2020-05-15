@@ -3,6 +3,8 @@ import ShiftController from './ShiftController'
 import { fireEvent, render } from '@testing-library/react-native'
 import * as redux from 'react-redux'
 import shiftSlice from '../../state/shiftSlice'
+import moment from 'moment'
+import MockDate from 'mockdate'
 
 describe('HandWashComponent', () => {
   let state
@@ -12,11 +14,16 @@ describe('HandWashComponent', () => {
     dispatch = jest.fn()
     redux.useSelector = selector => selector(state)
     redux.useDispatch = () => dispatch
+    MockDate.set('2018-1-1')
+  })
+
+  afterEach(() => {
+    MockDate.reset()
   })
 
   it('renders correctly when off shift', () => {
     state = {
-      shift: { onShift: false },
+      shifts: [],
     }
     const { baseElement } = render(<ShiftController />)
 
@@ -25,7 +32,7 @@ describe('HandWashComponent', () => {
 
   it('renders correctly when on shift', () => {
     state = {
-      shift: { onShift: true },
+      shifts: [{ endTime: moment().add(2, 'h') }],
     }
     const { baseElement } = render(<ShiftController />)
 
@@ -34,7 +41,7 @@ describe('HandWashComponent', () => {
 
   it('dispatches `startShift` action when user presses button', async () => {
     state = {
-      shift: { onShift: false },
+      shifts: [],
     }
     const { baseElement, getByTestId } = render(<ShiftController />)
 
