@@ -57,6 +57,7 @@ exports[`HandWashComponent renders correctly 1`] = `
               Please press the button below to start the timer
             </Text>
             <Button
+              disabled={false}
               testID="timer-button"
               title="Timer"
             />
@@ -77,7 +78,15 @@ exports[`HandWashComponent renders correctly 1`] = `
         >
           <View>
             <Text>
-              Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours. There is currently no way to end the shift prematurely.
+              Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours. 
+              
+
+              There is currently no way to end the shift prematurely.
+              
+
+              Current time is:
+               
+              Monday, January 1st 2018, 12:00:00 am
             </Text>
             <Button
               disabled={false}
@@ -85,8 +94,8 @@ exports[`HandWashComponent renders correctly 1`] = `
               title="Start shift"
             />
             <Text>
-              Shift status: 
-              OFF
+              Shift status:
+               You're currently not on shift
             </Text>
           </View>
         </View>

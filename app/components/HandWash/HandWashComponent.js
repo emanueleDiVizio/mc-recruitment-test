@@ -3,10 +3,14 @@ import { useDispatch } from 'react-redux'
 import { View, Text, Button } from 'react-native'
 import useInterval from '../../hooks/useInterval'
 import PropTypes from 'prop-types'
+import config from '../../config'
 
 import handWash from '../../state/handWashSlice'
 
-const HandWashComponent = ({ defaultDelay = 1000, defaultTimeout = 20 }) => {
+const HandWashComponent = ({
+  timerDelay = config.defaultTimerDelay,
+  timerTimeout = config.defaultTimerTimeoutInSeconds,
+}) => {
   const [timerCount, setTimerCount] = useState(0)
   const [delay, setDelay] = useState(null)
   const [handWashCompleted, setHandWashCompleted] = useState(false)
@@ -14,7 +18,7 @@ const HandWashComponent = ({ defaultDelay = 1000, defaultTimeout = 20 }) => {
   const dispatch = useDispatch()
 
   const onUserPressButton = () => {
-    setDelay(defaultDelay)
+    setDelay(timerDelay)
   }
 
   const onTimeOut = () => {
@@ -29,7 +33,7 @@ const HandWashComponent = ({ defaultDelay = 1000, defaultTimeout = 20 }) => {
   }
 
   useEffect(() => {
-    if (timerCount === defaultTimeout) {
+    if (timerCount === timerTimeout) {
       onTimeOut()
     }
   }, [timerCount])
@@ -59,8 +63,8 @@ const HandWashComponent = ({ defaultDelay = 1000, defaultTimeout = 20 }) => {
 }
 
 HandWashComponent.propTypes = {
-  defaultDelay: PropTypes.number,
-  defaultTimeout: PropTypes.number,
+  timerDelay: PropTypes.number,
+  timerTimeout: PropTypes.number,
 }
 
 export default HandWashComponent

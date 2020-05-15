@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { View, Text, Button } from 'react-native'
 import shiftSlice from '../../state/shiftSlice'
 import useInterval from '../../hooks/useInterval'
-
+import config from '../../config'
 import moment from 'moment'
 
 const lastShiftSelector = state => state.shifts.slice(-1)[0]
@@ -39,7 +39,7 @@ const ShiftController = () => {
         Please press the button below to start your 8 hours shift, you will
         receive a notification to wash your hand every 2 hours. {'\n'}There is
         currently no way to end the shift prematurely.{'\n'}Current time is:{' '}
-        {currentTime.format('dddd, MMMM Do YYYY, h:mm:ss a')}
+        {currentTime.format(config.defaultDateFormatString)}
       </Text>
       <Button
         onPress={onUserPressButton}
@@ -52,7 +52,7 @@ const ShiftController = () => {
         {isOnShift
           ? ` You are currently on shift until ${moment(
               lastShift.endTime
-            ).format('dddd, MMMM Do YYYY, h:mm:ss a')}`
+            ).format(config.defaultDateFormatString)}`
           : ` You're currently not on shift`}
       </Text>
     </View>

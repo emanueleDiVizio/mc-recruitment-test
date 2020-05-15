@@ -20,15 +20,24 @@ exports[`HandWashComponent dispatches \`startShift\` action when user presses bu
   >
     <View>
       <Text>
-        Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours
+        Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours. 
+        
+
+        There is currently no way to end the shift prematurely.
+        
+
+        Current time is:
+         
+        Monday, January 1st 2018, 12:00:00 am
       </Text>
       <Button
+        disabled={false}
         testID="shift-button"
         title="Start shift"
       />
       <Text>
-        Shift status: 
-        OFF
+        Shift status:
+         You're currently not on shift
       </Text>
     </View>
   </View>
@@ -55,15 +64,24 @@ exports[`HandWashComponent renders correctly when off shift 1`] = `
   >
     <View>
       <Text>
-        Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours
+        Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours. 
+        
+
+        There is currently no way to end the shift prematurely.
+        
+
+        Current time is:
+         
+        Monday, January 1st 2018, 12:00:00 am
       </Text>
       <Button
+        disabled={false}
         testID="shift-button"
         title="Start shift"
       />
       <Text>
-        Shift status: 
-        OFF
+        Shift status:
+         You're currently not on shift
       </Text>
     </View>
   </View>
@@ -90,15 +108,24 @@ exports[`HandWashComponent renders correctly when on shift 1`] = `
   >
     <View>
       <Text>
-        Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours
+        Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours. 
+        
+
+        There is currently no way to end the shift prematurely.
+        
+
+        Current time is:
+         
+        Monday, January 1st 2018, 12:00:00 am
       </Text>
       <Button
+        disabled={true}
         testID="shift-button"
         title="Start shift"
       />
       <Text>
-        Shift status: 
-        ON
+        Shift status:
+         You are currently on shift until Monday, January 1st 2018, 2:00:00 am
       </Text>
     </View>
   </View>
