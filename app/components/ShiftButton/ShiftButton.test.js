@@ -38,18 +38,4 @@ describe('HandWashComponent', () => {
 
     expect(baseElement).toMatchSnapshot()
   })
-
-  it('dispatches `startShift` action when user presses button', async () => {
-    state = {
-      shifts: [],
-    }
-    const { baseElement, getByTestId } = render(<ShiftButton />)
-
-    const button = getByTestId('shift-button')
-    fireEvent.press(button)
-
-    expect(dispatch).toHaveBeenCalledWith(shiftSlice.actions.startShift())
-
-    expect(baseElement).toMatchSnapshot()
-  })
 })

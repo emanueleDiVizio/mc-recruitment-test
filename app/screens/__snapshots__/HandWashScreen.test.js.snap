@@ -77,112 +77,91 @@ exports[`HandWashComponent renders correctly 1`] = `
         </Text>
       </View>
       <View
+        style={Object {}}
+      />
+      <View
         style={
           Object {
-            "flex": 1,
-            "flexDirection": "row",
+            "alignItems": "center",
+            "margin": 16,
           }
         }
       >
-        <View
+        <
           style={
             Object {
-              "flex": 1,
-              "margin": 16,
+              "alignItems": "center",
+              "backgroundColor": "#00A1D2",
+              "borderRadius": 100,
+              "flexDirection": "column",
+              "height": 200,
+              "justifyContent": "center",
+              "shadowColor": "black",
+              "shadowOffset": Object {
+                "height": -2,
+              },
+              "shadowOpacity": 0.2,
+              "shadowRadius": 16,
+              "width": 200,
             }
           }
+          testID="timer-button"
         >
-          <
+          <Text
+            allowFontScaling={false}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#00A1D2",
-                "borderRadius": 100,
-                "flexDirection": "column",
-                "height": 200,
-                "justifyContent": "center",
-                "width": 200,
-              }
-            }
-            testID="timer-button"
-          >
-            <Text
-              allowFontScaling={false}
-              style={
-                Array [
-                  Object {
-                    "color": "white",
-                    "fontSize": 60,
-                  },
-                  Object {
-                    "marginBottom": 24,
-                  },
-                  Object {
-                    "fontFamily": "FontAwesome5Free-Solid",
-                    "fontStyle": "normal",
-                    "fontWeight": "normal",
-                  },
-                  Object {
-                    "fontWeight": "900",
-                  },
-                ]
-              }
-            >
-              
-            </Text>
-            <Text
-              style={
+              Array [
                 Object {
                   "color": "white",
-                  "fontSize": 21,
-                }
-              }
-            >
-              Wash
-            </Text>
-          </>
-        </View>
-        <View
-          style={
-            Object {
-              "flex": 1,
-              "margin": 16,
+                  "fontSize": 60,
+                },
+                Object {
+                  "marginBottom": 24,
+                },
+                Object {
+                  "fontFamily": "FontAwesome5Free-Solid",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {
+                  "fontWeight": "900",
+                },
+              ]
             }
-          }
-        >
-          <View>
-            <Text>
-              Please press the button below to start your 8 hours shift, you will receive a notification to wash your hand every 2 hours. 
-              
-
-              There is currently no way to end the shift prematurely.
-              
-
-              Current time is:
-               
-              Monday, January 1st 2018, 12:00:00 am
-            </Text>
-            <Button
-              disabled={false}
-              testID="shift-button"
-              title="Start shift"
-            />
-            <Text>
-              Shift status:
-               You're currently not on shift
-            </Text>
-          </View>
-        </View>
+          >
+            
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 21,
+              }
+            }
+          >
+            Wash
+          </Text>
+        </>
       </View>
       <View
         style={
           Object {
             "flex": 1,
-            "margin": 16,
           }
         }
       >
         <View>
+          <Text
+            style={
+              Object {
+                "color": "#4A4A4A",
+                "marginBottom": 8,
+                "marginLeft": 16,
+              }
+            }
+          >
+            HISTORY
+          </Text>
           <ScrollView
             disableVirtualization={false}
             horizontal={false}
@@ -198,6 +177,42 @@ exports[`HandWashComponent renders correctly 1`] = `
           />
         </View>
       </View>
+      <
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#00A778",
+            },
+            Object {
+              "bottom": 0,
+              "height": 100,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "shadowColor": "black",
+              "shadowOffset": Object {
+                "height": -4,
+              },
+              "shadowOpacity": 0.4,
+              "shadowRadius": 16,
+            },
+          ]
+        }
+        testID="shift-button"
+      >
+        <Text
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "white",
+              "fontSize": 17,
+              "marginTop": 8,
+            }
+          }
+        >
+          Start shift
+        </Text>
+      </>
     </View>
   </View>
 </View>

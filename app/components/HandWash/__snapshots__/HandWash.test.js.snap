@@ -27,6 +27,12 @@ exports[`HandWash initializes correctly 1`] = `
           "flexDirection": "column",
           "height": 200,
           "justifyContent": "center",
+          "shadowColor": "black",
+          "shadowOffset": Object {
+            "height": -2,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 16,
           "width": 200,
         }
       }
