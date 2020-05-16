@@ -19,7 +19,7 @@ jobs:
     - name: yarn, coveralls
       run: |
         yarn
-        yarn coveralls
+        yarn test
 
     - name: Coveralls
       uses: coverallsapp/github-action@master

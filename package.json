@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest --coverage",
-    "coveralls": "jest --coverage --silent && coveralls < coverage/lcov.info",
+    "coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "lint": "eslint ."
   },
   "dependencies": {
