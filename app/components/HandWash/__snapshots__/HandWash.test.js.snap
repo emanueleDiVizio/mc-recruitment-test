@@ -38,6 +38,53 @@ exports[`HandWash initializes correctly 1`] = `
       }
       testID="timer-button"
     >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": -5,
+            "position": "absolute",
+            "right": 0,
+            "top": -5,
+          }
+        }
+      >
+        <RNSVGSvgView
+          bbHeight={210}
+          bbWidth={210}
+          focusable={false}
+          height={210}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 210,
+                "width": 210,
+              },
+            ]
+          }
+          width={210}
+        >
+          <RNSVGGroup>
+            <RNSVGGroup
+              matrix={
+                Array [
+                  6.123233995736766e-17,
+                  1,
+                  -1,
+                  6.123233995736766e-17,
+                  210,
+                  0,
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
       <Text
         allowFontScaling={false}
         style={
@@ -115,6 +162,69 @@ exports[`HandWash starts the timer when button is pressed and updates with elaps
       }
       testID="timer-button"
     >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "left": -5,
+            "position": "absolute",
+            "right": 0,
+            "top": -5,
+          }
+        }
+      >
+        <RNSVGSvgView
+          bbHeight={210}
+          bbWidth={210}
+          focusable={false}
+          height={210}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              Object {
+                "flex": 0,
+                "height": 210,
+                "width": 210,
+              },
+            ]
+          }
+          width={210}
+        >
+          <RNSVGGroup>
+            <RNSVGGroup
+              matrix={
+                Array [
+                  6.123233995736766e-17,
+                  1,
+                  -1,
+                  6.123233995736766e-17,
+                  210,
+                  0,
+                ]
+              }
+            >
+              <RNSVGPath
+                d="M 56.2481872741426 195.16379958687926 A 102.5 102.5 0 1 0 105 2.5"
+                fill={0}
+                propList={
+                  Array [
+                    "fill",
+                    "stroke",
+                    "strokeWidth",
+                    "strokeLinecap",
+                  ]
+                }
+                stroke={4278232952}
+                strokeLinecap={0}
+                strokeWidth={5}
+              />
+            </RNSVGGroup>
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
       <Text
         style={
           Object {
@@ -124,7 +234,7 @@ exports[`HandWash starts the timer when button is pressed and updates with elaps
           }
         }
       >
-        10
+        11
       </Text>
       <Text
         style={

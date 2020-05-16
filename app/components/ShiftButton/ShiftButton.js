@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
+
 import shiftSlice from '../../state/shiftSlice'
 import useIsOnShift from '../../hooks/useIsOnShift'
 import config from '../../config'

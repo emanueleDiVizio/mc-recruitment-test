@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { Text, StyleSheet, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5'
+import { AnimatedCircularProgress } from 'react-native-circular-progress'
 
 import useInterval from '../../hooks/useInterval'
 import PropTypes from 'prop-types'
@@ -12,7 +13,7 @@ const HandWash = ({
   timerDelay = config.defaultTimerDelay,
   timerTimeout = config.defaultTimerTimeoutInSeconds,
 }) => {
-  const [timerCount, setTimerCount] = useState(0)
+  const [timerCount, setTimerCount] = useState(1)
   const [delay, setDelay] = useState(null)
   const [isWashing, setIsWashing] = useState(false)
 
@@ -26,8 +27,12 @@ const HandWash = ({
   const onTimeOut = () => {
     setDelay(null)
     dispatch(handWash.actions.addHandWash())
-    setTimerCount(0)
     setIsWashing(false)
+    setTimerCount(0)
+  }
+
+  const calculateProgress = () => {
+    return isWashing ? (timerCount / (timerTimeout - 1)) * 100 : 0
   }
 
   useEffect(() => {
@@ -46,6 +51,14 @@ const HandWash = ({
       onPress={onUserPressButton}
       testID="timer-button"
     >
+      <AnimatedCircularProgress
+        size={210}
+        style={styles.progress}
+        width={5}
+        fill={calculateProgress()}
+        tintColor={config.colors.main}
+      />
+
       {isWashing ? (
         <React.Fragment>
           <Text style={styles.countText}>{timerCount}</Text>
@@ -85,6 +98,7 @@ const styles = StyleSheet.create({
     shadowRadius: 16,
     shadowOffset: { height: -2 },
   },
+  progress: { position: 'absolute', top: -5, right: 0, left: -5, bottom: 0 },
   washText: {
     color: 'white',
     fontSize: 21,

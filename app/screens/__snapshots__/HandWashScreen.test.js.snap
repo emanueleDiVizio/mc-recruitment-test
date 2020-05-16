@@ -107,6 +107,53 @@ exports[`HandWashComponent renders correctly 1`] = `
           }
           testID="timer-button"
         >
+          <View
+            style={
+              Object {
+                "bottom": 0,
+                "left": -5,
+                "position": "absolute",
+                "right": 0,
+                "top": -5,
+              }
+            }
+          >
+            <RNSVGSvgView
+              bbHeight={210}
+              bbWidth={210}
+              focusable={false}
+              height={210}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  Object {
+                    "flex": 0,
+                    "height": 210,
+                    "width": 210,
+                  },
+                ]
+              }
+              width={210}
+            >
+              <RNSVGGroup>
+                <RNSVGGroup
+                  matrix={
+                    Array [
+                      6.123233995736766e-17,
+                      1,
+                      -1,
+                      6.123233995736766e-17,
+                      210,
+                      0,
+                    ]
+                  }
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
           <Text
             allowFontScaling={false}
             style={
@@ -163,6 +210,7 @@ exports[`HandWashComponent renders correctly 1`] = `
             HISTORY
           </Text>
           <ScrollView
+            data={Array []}
             disableVirtualization={false}
             horizontal={false}
             initialNumToRender={10}

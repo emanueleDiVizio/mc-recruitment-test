@@ -4,7 +4,12 @@ import { View, FlatList, Text, StyleSheet } from 'react-native'
 import moment from 'moment'
 import config from '../../config'
 
-const handWashHistorySelector = state => state.handWashes
+const handWashHistorySelector = state =>
+  [...state.handWashes].sort(({ endTime }, { endTime: bEndTime }) => {
+    let nA = moment(endTime)
+    let nB = moment(bEndTime)
+    return nA.isAfter(nB) ? -1 : nA.isBefore(nB) ? 1 : 0
+  })
 
 const HandWashItem = ({ endTime }) => {
   var date = moment(endTime)

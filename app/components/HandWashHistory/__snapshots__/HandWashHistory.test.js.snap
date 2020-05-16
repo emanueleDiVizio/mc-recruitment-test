@@ -34,13 +34,13 @@ exports[`HandWashComponent renders correctly fetching data from store 1`] = `
         data={
           Array [
             Object {
-              "endTime": 1589532292430,
+              "endTime": 1589532333570,
             },
             Object {
               "endTime": 1589532322793,
             },
             Object {
-              "endTime": 1589532333570,
+              "endTime": 1589532292430,
             },
           ]
         }
@@ -86,121 +86,121 @@ exports[`HandWashComponent renders correctly fetching data from store 1`] = `
                   }
                 }
               >
+                08:45
+              </Text>
+            </View>
+            <View>
+              <Text
+                style={
+                  Object {
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Friday
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#9B9B9B",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                15th May 2020
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "margin": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#00A778",
+                  "justifyContent": "center",
+                  "marginRight": 8,
+                  "width": 70,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "padding": 8,
+                  }
+                }
+              >
+                08:45
+              </Text>
+            </View>
+            <View>
+              <Text
+                style={
+                  Object {
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Friday
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#9B9B9B",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                15th May 2020
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "margin": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#00A778",
+                  "justifyContent": "center",
+                  "marginRight": 8,
+                  "width": 70,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "padding": 8,
+                  }
+                }
+              >
                 08:44
-              </Text>
-            </View>
-            <View>
-              <Text
-                style={
-                  Object {
-                    "fontSize": 17,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                Friday
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#9B9B9B",
-                    "fontSize": 14,
-                  }
-                }
-              >
-                15th May 2020
-              </Text>
-            </View>
-          </View>
-        </View>
-        <View
-          style={null}
-        >
-          <View
-            style={
-              Object {
-                "flexDirection": "row",
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#00A778",
-                  "justifyContent": "center",
-                  "marginRight": 8,
-                  "width": 70,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": "white",
-                    "padding": 8,
-                  }
-                }
-              >
-                08:45
-              </Text>
-            </View>
-            <View>
-              <Text
-                style={
-                  Object {
-                    "fontSize": 17,
-                    "fontWeight": "bold",
-                  }
-                }
-              >
-                Friday
-              </Text>
-              <Text
-                style={
-                  Object {
-                    "color": "#9B9B9B",
-                    "fontSize": 14,
-                  }
-                }
-              >
-                15th May 2020
-              </Text>
-            </View>
-          </View>
-        </View>
-        <View
-          style={null}
-        >
-          <View
-            style={
-              Object {
-                "flexDirection": "row",
-                "margin": 16,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#00A778",
-                  "justifyContent": "center",
-                  "marginRight": 8,
-                  "width": 70,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": "white",
-                    "padding": 8,
-                  }
-                }
-              >
-                08:45
               </Text>
             </View>
             <View>

@@ -26,7 +26,7 @@ describe('HandWash', () => {
 
     act(() => jest.advanceTimersByTime(10000))
 
-    await wait(() => expect(getByText('10')).toBeTruthy())
+    await wait(() => expect(getByText('11')).toBeTruthy())
 
     expect(baseElement).toMatchSnapshot()
   })
@@ -37,7 +37,7 @@ describe('HandWash', () => {
     const button = getByTestId('timer-button')
     fireEvent.press(button)
 
-    act(() => jest.runAllTimers())
+    act(() => jest.advanceTimersByTime(22000))
 
     expect(dispatch).toHaveBeenCalledWith(handWash.actions.addHandWash())
   })

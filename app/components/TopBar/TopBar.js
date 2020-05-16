@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Platform } from 'react-native'
 import config from '../../config'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
@@ -14,19 +14,31 @@ const TopBar = ({ title = config.headerTitle }) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 100,
+    height: Platform.OS === 'ios' ? 100 : 64,
     backgroundColor: config.colors.main,
-    alignItems: 'flex-end',
+    alignItems: Platform.OS === 'ios' ? 'flex-end' : 'center',
     flexDirection: 'row',
   },
   title: {
     color: 'white',
-    marginBottom: 12,
+    marginBottom: Platform.OS === 'ios' ? 12 : 0,
     fontSize: 17,
     flex: 1,
     textAlign: 'center',
   },
-  icon: { flexDirection: 'row', right: 12, bottom: 12, position: 'absolute' },
+  icon:
+    Platform.OS === 'ios'
+      ? {
+          flexDirection: 'row',
+          right: 12,
+          bottom: 12,
+          position: 'absolute',
+        }
+      : {
+          flexDirection: 'row',
+          right: 12,
+          position: 'absolute',
+        },
 })
 
 export default TopBar

@@ -22,6 +22,7 @@ describe('HandWashComponent', () => {
   it('renders correctly', () => {
     state = {
       shifts: [],
+      handWashes: [],
     }
     const { baseElement } = render(<HandWashScreen />)
 
