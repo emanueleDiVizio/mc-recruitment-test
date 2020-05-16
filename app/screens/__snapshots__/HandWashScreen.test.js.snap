@@ -87,7 +87,7 @@ exports[`HandWashComponent renders correctly 1`] = `
           }
         }
       >
-        <
+        <TouchableOpacity
           style={
             Object {
               "alignItems": "center",
@@ -141,7 +141,7 @@ exports[`HandWashComponent renders correctly 1`] = `
           >
             Wash
           </Text>
-        </>
+        </TouchableOpacity>
       </View>
       <View
         style={
@@ -177,7 +177,7 @@ exports[`HandWashComponent renders correctly 1`] = `
           />
         </View>
       </View>
-      <
+      <TouchableOpacity
         style={
           Array [
             Object {
@@ -212,7 +212,7 @@ exports[`HandWashComponent renders correctly 1`] = `
         >
           Start shift
         </Text>
-      </>
+      </TouchableOpacity>
     </View>
   </View>
 </View>

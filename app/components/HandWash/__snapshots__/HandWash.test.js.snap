@@ -18,7 +18,7 @@ exports[`HandWash initializes correctly 1`] = `
       }
     }
   >
-    <
+    <TouchableOpacity
       style={
         Object {
           "alignItems": "center",
@@ -72,7 +72,71 @@ exports[`HandWash initializes correctly 1`] = `
       >
         Wash
       </Text>
-    </>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`HandWash starts the timer when button is pressed and updates with elapsed time 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TouchableOpacity
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#00A1D2",
+          "borderRadius": 100,
+          "flexDirection": "column",
+          "height": 200,
+          "justifyContent": "center",
+          "shadowColor": "black",
+          "shadowOffset": Object {
+            "height": -2,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 16,
+          "width": 200,
+        }
+      }
+      testID="timer-button"
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 60,
+            "marginBottom": 24,
+          }
+        }
+      >
+        10
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 21,
+          }
+        }
+      >
+        Seconds
+      </Text>
+    </TouchableOpacity>
   </View>
 </View>
 `;
