@@ -1,12 +1,13 @@
 {
   "name": "HandWashTimer",
-  "version": "1.1",
+  "version": "1.2",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --coverage",
+    "coveralls": "jest --coverage && coveralls < coverage/lcov.info",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -36,11 +37,16 @@
     "babel-jest": "^25.4.0",
     "eslint": "^6.8.0",
     "jest": "^25.4.0",
+    "coveralls": "^3.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "^1.19.1",
     "react-test-renderer": "16.11.0"
   },
   "jest": {
-    "preset": "@testing-library/react-native"
+    "preset": "@testing-library/react-native",
+    "globalSetup": "<rootDir>/jest/global-setup.js",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest/setupJest.js"
+    ]
   }
 }
