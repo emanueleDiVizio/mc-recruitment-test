@@ -19,9 +19,7 @@ const ShiftBadge = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 24,
-    marginRight: 24,
-    marginLeft: 24,
+    margin: 20,
     borderRadius: 4,
     backgroundColor: config.colors.main,
     flexDirection: 'column',

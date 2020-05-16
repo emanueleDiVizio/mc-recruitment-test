@@ -80,6 +80,10 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    shadowColor: 'black',
+    shadowOpacity: 0.2,
+    shadowRadius: 16,
+    shadowOffset: { height: -2 },
   },
   washText: {
     color: 'white',
