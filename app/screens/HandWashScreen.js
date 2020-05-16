@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import HandWashComponent from '../components/HandWash/HandWashComponent'
 import HandWashHistory from '../components/HandWashHistory/HandWashHistory'
 import TopBar from '../components/TopBar/TopBar'
