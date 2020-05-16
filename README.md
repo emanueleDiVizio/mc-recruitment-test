@@ -1,5 +1,7 @@
 # Medic Creations recruitment test - React Native Instructions
 
+[![Coverage Status](https://coveralls.io/repos/github/emanueleDiVizio/mc-recruitment-test/badge.svg?branch=feature/coveralls)](https://coveralls.io/github/emanueleDiVizio/mc-recruitment-test?branch=feature/coveralls)
+
 Thanks for taking the time to do our front-end / full-stack coding test. The challenge has two parts:
 
 - a task to create a basic app that will allow people to track their hand washing, keep a history of their hand washing and when needed receive regular reminders to wash their hands.
@@ -92,8 +94,8 @@ The bulk of the code is in the `app` directory.
 | location       | contents                                                                                                                     |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | app/App.js     | Entrypoint for the app                                                                                                       |
-| app/components | Place to keep both smart and dumb components.                                                                                         |
-| app/screens    | components representing entire screens within the app, where smaller component are pieced together.                         |
+| app/components | Place to keep both smart and dumb components.                                                                                |
+| app/screens    | components representing entire screens within the app, where smaller component are pieced together.                          |
 | app/config     | app-wide config - things like an api host, colors, etc. Configuration of the redux store and, in dev, tools like Reactotron. |
 | app/state      | redux reducers/actions/selectors. Combined in `index.js`                                                                     |
 | app/sagas      | `redux-saga` sagas, forked from the root saga in `index.js` to run in parallel.                                              |

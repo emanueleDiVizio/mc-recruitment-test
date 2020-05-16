@@ -3,8 +3,6 @@ import HandWash from './HandWash'
 import { render } from '@testing-library/react-native'
 import * as redux from 'react-redux'
 
-jest.useFakeTimers()
-
 describe('HandWash', () => {
   let dispatch
 

@@ -86,7 +86,7 @@ exports[`HandWashComponent renders correctly fetching data from store 1`] = `
                   }
                 }
               >
-                10:44
+                08:44
               </Text>
             </View>
             <View>
@@ -143,7 +143,7 @@ exports[`HandWashComponent renders correctly fetching data from store 1`] = `
                   }
                 }
               >
-                10:45
+                08:45
               </Text>
             </View>
             <View>
@@ -200,7 +200,7 @@ exports[`HandWashComponent renders correctly fetching data from store 1`] = `
                   }
                 }
               >
-                10:45
+                08:45
               </Text>
             </View>
             <View>
