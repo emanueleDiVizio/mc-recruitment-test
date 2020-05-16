@@ -1,39 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import { useDispatch } from 'react-redux'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 import shiftSlice from '../../state/shiftSlice'
-import useInterval from '../../hooks/useInterval'
+import useIsOnShift from '../../hooks/useIsOnShift'
 import config from '../../config'
-import moment from 'moment'
-
-const lastShiftSelector = state => state.shifts.slice(-1)[0]
 
 const ShiftController = () => {
-  const lastShift = useSelector(lastShiftSelector)
-
   const dispatch = useDispatch()
-  const [currentTime, setCurrentTime] = useState(moment())
-  const [isOnShift, setIsOnShift] = useState(false)
+
+  const [isOnShift] = useIsOnShift()
 
   const onUserPressButton = () => {
     isOnShift
       ? dispatch(shiftSlice.actions.endShift())
       : dispatch(shiftSlice.actions.startShift())
   }
-
-  const updateTime = () => {
-    setCurrentTime(moment())
-  }
-
-  useInterval(() => {
-    updateTime()
-  }, 1000)
-
-  useEffect(() => {
-    if (lastShift) {
-      setIsOnShift(currentTime.isBefore(lastShift.endTime))
-    }
-  }, [currentTime])
 
   const computeStyles = onShift => ({
     backgroundColor: onShift ? config.colors.accent : config.colors.main,
