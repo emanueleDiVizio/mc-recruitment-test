@@ -44,8 +44,9 @@
   },
   "jest": {
     "preset": "@testing-library/react-native",
+    "globalSetup": "<rootDir>/jest/global-setup.js",
     "setupFilesAfterEnv": [
-      "<rootDir>/setupJest.js"
+      "<rootDir>/jest/setupJest.js"
     ]
   }
 }
