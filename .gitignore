@@ -36,6 +36,8 @@ npm-debug.log
 yarn-error.log
 package-lock.json
 yarn.lock
+.coveralls.yml
+coverage/
 
 # BUCK
 buck-out/
