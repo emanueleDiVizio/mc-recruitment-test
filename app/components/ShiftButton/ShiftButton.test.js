@@ -38,4 +38,32 @@ describe('HandWashComponent', () => {
 
     expect(baseElement).toMatchSnapshot()
   })
+
+  it('dispatches `startShift` action when user presses button and user is not on shift', async () => {
+    state = {
+      shifts: [],
+    }
+    const { baseElement, getByTestId } = render(<ShiftButton />)
+
+    const button = getByTestId('shift-button')
+    fireEvent.press(button)
+
+    expect(dispatch).toHaveBeenCalledWith(shiftSlice.actions.startShift())
+
+    expect(baseElement).toMatchSnapshot()
+  })
+
+  it('dispatches `endShift` action when user presses button and is on shift', async () => {
+    state = {
+      shifts: [{ endTime: moment().add(2, 'h') }],
+    }
+    const { baseElement, getByTestId } = render(<ShiftButton />)
+
+    const button = getByTestId('shift-button')
+    fireEvent.press(button)
+
+    expect(dispatch).toHaveBeenCalledWith(shiftSlice.actions.endShift())
+
+    expect(baseElement).toMatchSnapshot()
+  })
 })

@@ -1,7 +1,8 @@
 import React from 'react'
-import HandWashScreen from './HandWashScreen'
+import ShiftBadge from './ShiftBadge'
 import { render } from '@testing-library/react-native'
 import * as redux from 'react-redux'
+import moment from 'moment'
 import MockDate from 'mockdate'
 
 describe('HandWashComponent', () => {
@@ -19,12 +20,20 @@ describe('HandWashComponent', () => {
     MockDate.reset()
   })
 
-  it('renders correctly', () => {
+  it('renders correctly when off shift', () => {
     state = {
       shifts: [],
-      handWashes: [],
     }
-    const { baseElement } = render(<HandWashScreen />)
+    const { baseElement } = render(<ShiftBadge />)
+
+    expect(baseElement).toMatchSnapshot()
+  })
+
+  it('renders correctly when on shift', () => {
+    state = {
+      shifts: [{ endTime: moment().add(2, 'h') }],
+    }
+    const { baseElement } = render(<ShiftBadge />)
 
     expect(baseElement).toMatchSnapshot()
   })
