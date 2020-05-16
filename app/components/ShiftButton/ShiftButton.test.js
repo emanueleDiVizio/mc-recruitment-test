@@ -1,5 +1,5 @@
 import React from 'react'
-import ShiftController from './ShiftController'
+import ShiftButton from './ShiftButton'
 import { fireEvent, render } from '@testing-library/react-native'
 import * as redux from 'react-redux'
 import shiftSlice from '../../state/shiftSlice'
@@ -25,7 +25,7 @@ describe('HandWashComponent', () => {
     state = {
       shifts: [],
     }
-    const { baseElement } = render(<ShiftController />)
+    const { baseElement } = render(<ShiftButton />)
 
     expect(baseElement).toMatchSnapshot()
   })
@@ -34,21 +34,7 @@ describe('HandWashComponent', () => {
     state = {
       shifts: [{ endTime: moment().add(2, 'h') }],
     }
-    const { baseElement } = render(<ShiftController />)
-
-    expect(baseElement).toMatchSnapshot()
-  })
-
-  it('dispatches `startShift` action when user presses button', async () => {
-    state = {
-      shifts: [],
-    }
-    const { baseElement, getByTestId } = render(<ShiftController />)
-
-    const button = getByTestId('shift-button')
-    fireEvent.press(button)
-
-    expect(dispatch).toHaveBeenCalledWith(shiftSlice.actions.startShift())
+    const { baseElement } = render(<ShiftButton />)
 
     expect(baseElement).toMatchSnapshot()
   })

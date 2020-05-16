@@ -20,6 +20,22 @@
 		2DCD954D1E0B4F2C00145EB5 /* HandWashTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HandWashTimerTests.m */; };
 		2F4EEB9BC6B691401D160B90 /* libPods-HandWashTimer-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C09C416E0FF2A08CB7AC92 /* libPods-HandWashTimer-tvOSTests.a */; };
 		E0E8BF4E754DDF685FB0AF83 /* libPods-HandWashTimer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3783A3EA9B39535FE1B8BB3 /* libPods-HandWashTimer.a */; };
+		F8CA6CC4246FE459005F58A2 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC0246FE458005F58A2 /* FontAwesome.ttf */; };
+		F8CA6CC5246FE459005F58A2 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC0246FE458005F58A2 /* FontAwesome.ttf */; };
+		F8CA6CC6246FE459005F58A2 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC0246FE458005F58A2 /* FontAwesome.ttf */; };
+		F8CA6CC7246FE459005F58A2 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC0246FE458005F58A2 /* FontAwesome.ttf */; };
+		F8CA6CC8246FE459005F58A2 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC1246FE458005F58A2 /* FontAwesome5_Brands.ttf */; };
+		F8CA6CC9246FE459005F58A2 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC1246FE458005F58A2 /* FontAwesome5_Brands.ttf */; };
+		F8CA6CCA246FE459005F58A2 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC1246FE458005F58A2 /* FontAwesome5_Brands.ttf */; };
+		F8CA6CCB246FE459005F58A2 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC1246FE458005F58A2 /* FontAwesome5_Brands.ttf */; };
+		F8CA6CCC246FE459005F58A2 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC2246FE458005F58A2 /* FontAwesome5_Solid.ttf */; };
+		F8CA6CCD246FE459005F58A2 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC2246FE458005F58A2 /* FontAwesome5_Solid.ttf */; };
+		F8CA6CCE246FE459005F58A2 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC2246FE458005F58A2 /* FontAwesome5_Solid.ttf */; };
+		F8CA6CCF246FE459005F58A2 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC2246FE458005F58A2 /* FontAwesome5_Solid.ttf */; };
+		F8CA6CD0246FE459005F58A2 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC3246FE458005F58A2 /* FontAwesome5_Regular.ttf */; };
+		F8CA6CD1246FE459005F58A2 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC3246FE458005F58A2 /* FontAwesome5_Regular.ttf */; };
+		F8CA6CD2246FE459005F58A2 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC3246FE458005F58A2 /* FontAwesome5_Regular.ttf */; };
+		F8CA6CD3246FE459005F58A2 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8CA6CC3246FE458005F58A2 /* FontAwesome5_Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +83,10 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F3783A3EA9B39535FE1B8BB3 /* libPods-HandWashTimer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HandWashTimer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8CA6CC0246FE458005F58A2 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		F8CA6CC1246FE458005F58A2 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		F8CA6CC2246FE458005F58A2 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		F8CA6CC3246FE458005F58A2 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +145,7 @@
 		13B07FAE1A68108700A75B9A /* HandWashTimer */ = {
 			isa = PBXGroup;
 			children = (
+				F8CA6CBF246FE415005F58A2 /* Fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -194,8 +215,18 @@
 				4C31BFEF18B8509695493EF4 /* Pods-HandWashTimer-tvOSTests.debug.xcconfig */,
 				1CDF964D5E2D725C52EB528B /* Pods-HandWashTimer-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F8CA6CBF246FE415005F58A2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F8CA6CC0246FE458005F58A2 /* FontAwesome.ttf */,
+				F8CA6CC1246FE458005F58A2 /* FontAwesome5_Brands.ttf */,
+				F8CA6CC3246FE458005F58A2 /* FontAwesome5_Regular.ttf */,
+				F8CA6CC2246FE458005F58A2 /* FontAwesome5_Solid.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +362,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CA6CCD246FE459005F58A2 /* FontAwesome5_Solid.ttf in Resources */,
+				F8CA6CC5246FE459005F58A2 /* FontAwesome.ttf in Resources */,
+				F8CA6CD1246FE459005F58A2 /* FontAwesome5_Regular.ttf in Resources */,
+				F8CA6CC9246FE459005F58A2 /* FontAwesome5_Brands.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,8 +373,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CA6CD0246FE459005F58A2 /* FontAwesome5_Regular.ttf in Resources */,
+				F8CA6CCC246FE459005F58A2 /* FontAwesome5_Solid.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				F8CA6CC8246FE459005F58A2 /* FontAwesome5_Brands.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				F8CA6CC4246FE459005F58A2 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +386,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CA6CCA246FE459005F58A2 /* FontAwesome5_Brands.ttf in Resources */,
+				F8CA6CCE246FE459005F58A2 /* FontAwesome5_Solid.ttf in Resources */,
+				F8CA6CD2246FE459005F58A2 /* FontAwesome5_Regular.ttf in Resources */,
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				F8CA6CC6246FE459005F58A2 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +398,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8CA6CCF246FE459005F58A2 /* FontAwesome5_Solid.ttf in Resources */,
+				F8CA6CC7246FE459005F58A2 /* FontAwesome.ttf in Resources */,
+				F8CA6CD3246FE459005F58A2 /* FontAwesome5_Regular.ttf in Resources */,
+				F8CA6CCB246FE459005F58A2 /* FontAwesome5_Brands.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

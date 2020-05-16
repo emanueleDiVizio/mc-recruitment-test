@@ -7,11 +7,16 @@ const shiftSlice = createSlice({
     startShift: state => [
       ...state,
       {
+        startTime: moment().valueOf(),
         endTime: moment()
           .add(8, 'h')
           .valueOf(),
       },
     ],
+    endShift: state => {
+      var newState = [...state]
+      return [{ ...newState.pop(), endTime: moment().valueOf() }, ...newState]
+    },
   },
 })
 
