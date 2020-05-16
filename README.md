@@ -59,9 +59,7 @@ Inspiration for the test format taken with ❤️ from JustEat's recruitment tes
 
 # Hand Wash Timer Mobile App - Development Readme
 
-[![Coverage Status](https://coveralls.io/repos/github/emanueleDiVizio/mc-recruitment-test/badge.svg?branch=feature/coveralls)](https://coveralls.io/github/emanueleDiVizio/mc-recruitment-test?branch=feature/coveralls)
-
-![Tests](https://github.com/emanueleDiVizio/mc-recruitment-test/workflows/Run%20tests%20and%20push%20to%20Coveralls/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/emanueleDiVizio/mc-recruitment-test/badge.svg?branch=feature/coveralls)](https://coveralls.io/github/emanueleDiVizio/mc-recruitment-test?branch=feature/coveralls)![Tests](https://github.com/emanueleDiVizio/mc-recruitment-test/workflows/Tests/badge.svg) 
 
 react-native repo for the Medic Bleep Hand Wash Timer mobile app
 
@@ -153,7 +151,7 @@ We use `prettier` for code formatting.
 
 # Build & Deploy
 
-I've set up `fastlane` is set up to delvier to `TestFlight` and `Play Store` beta track. There is a Github Action that triggers this pipeline on every push and PR to master. It will not work as there are no credentials set to deliver to the stores, as it is not necessary for the sake of the test. In a production scenario, those guides should be followed to set up Keys and Certificates for [Android](https://shift.infinite.red/simple-react-native-android-releases-319dc5e29605) and [iOs](https://docs.fastlane.tools/actions/match/#setup).  Follow the steps below to deply a `debug` version to a local device
+I've set up `fastlane` is set up to delvier to `TestFlight` and `PlayStore` beta tracks. There is a Github Action that triggers this pipeline on every push and PR to master. It will not work as there are no credentials set to deliver to the stores, as it is not necessary for the sake of the test. In a production scenario, those guides should be followed to set up Keys and Certificates for [Android](https://shift.infinite.red/simple-react-native-android-releases-319dc5e29605) and [iOs](https://docs.fastlane.tools/actions/match/#setup).  Follow the steps below to deploy a `debug` version to a local device
 
 ## iOS
 
