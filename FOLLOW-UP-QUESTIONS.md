@@ -27,7 +27,7 @@ Run `yarn android` or `yarn ios` and you're good to go (Provided you've set up d
 
 ### Q) If you had more time, what further improvements or new features would you add?
 
-I believe I've made good use of the time available and shipped an almost production ready codebase. If I had more time, I would have gladly implemented the rest of the features that were in the designs (which I loved! Kudos to the designer) but were not requested in the user stories.
+I believe I've made good use of the time available and shipped an almost production ready codebase. If I had more time, I would have gladly implemented the rest of the features that were in the designs (which I loved! Kudos to the designer) but were not requested in the user stories. I would also add unit tests for `sagas`, `reducers` and `NotificationService`. As they're not crucial, I've decided to do without for the sake of the test project. In a production environment I would probably write them before shipping if time allows.
 
 ### Q) Which parts are you most proud of? And why?
 
