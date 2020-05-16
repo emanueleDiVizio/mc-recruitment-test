@@ -1,8 +1,7 @@
 import React from 'react'
 import ShiftButton from './ShiftButton'
-import { fireEvent, render } from '@testing-library/react-native'
+import { render } from '@testing-library/react-native'
 import * as redux from 'react-redux'
-import shiftSlice from '../../state/shiftSlice'
 import moment from 'moment'
 import MockDate from 'mockdate'
 
