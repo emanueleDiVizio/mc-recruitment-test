@@ -23,10 +23,10 @@ jobs:
     needs: install-and-test
     runs-on: ubuntu-latest
     steps: 
-      - uses: actions/checkout@v2
+      - uses:  maierj/fastlane-action@v1.4.0
       - name: Push to Google Play Beta
-        run: |
-          fastlane android beta
+        with:
+          lane: 'android beta'
       - name: Push to Testflight
-        run: |
-          fastlane ios beta
+        with:
+          lane: 'ios beta'
