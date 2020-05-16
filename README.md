@@ -1,7 +1,5 @@
 # Medic Creations recruitment test - React Native Instructions
 
-[![Coverage Status](https://coveralls.io/repos/github/emanueleDiVizio/mc-recruitment-test/badge.svg?branch=feature/coveralls)](https://coveralls.io/github/emanueleDiVizio/mc-recruitment-test?branch=feature/coveralls)
-
 Thanks for taking the time to do our front-end / full-stack coding test. The challenge has two parts:
 
 - a task to create a basic app that will allow people to track their hand washing, keep a history of their hand washing and when needed receive regular reminders to wash their hands.
@@ -60,6 +58,8 @@ Inspiration for the test format taken with ❤️ from JustEat's recruitment tes
 ---
 
 # Hand Wash Timer Mobile App - Development Readme
+
+[![Coverage Status](https://coveralls.io/repos/github/emanueleDiVizio/mc-recruitment-test/badge.svg?branch=feature/coveralls)](https://coveralls.io/github/emanueleDiVizio/mc-recruitment-test?branch=feature/coveralls)![Tests](https://github.com/emanueleDiVizio/mc-recruitment-test/workflows/Tests/badge.svg) 
 
 react-native repo for the Medic Bleep Hand Wash Timer mobile app
 
@@ -151,11 +151,11 @@ We use `prettier` for code formatting.
 
 # Build & Deploy
 
-I haven't implemented a deploy step as it's quite cumbersome to set up keys for Android and iOs store release, and it is not necessary for the sake of the test, as running `yarn android` and `yarn ios` produces dev build artifacts already. However, these guide would need to be followed to perform a signed release build (https://reactnative.dev/docs/running-on-device.html#building-your-app-for-production). A debug build is also present as an artifact on Github Actions pipeline.
+I've set up `fastlane` is set up to delvier to `TestFlight` and `PlayStore` beta tracks. There is a Github Action that triggers this pipeline on every push and PR to master. It will not work as there are no credentials set to deliver to the stores, as it is not necessary for the sake of the test. In a production scenario, those guides should be followed to set up Keys and Certificates for [Android](https://shift.infinite.red/simple-react-native-android-releases-319dc5e29605) and [iOs](https://docs.fastlane.tools/actions/match/#setup).  Follow the steps below to deploy a `debug` version to a local device
 
 ## iOS
 
-Open the simulator and run `yarn ios`, the app will install automatically.
+Run`yarn ios`, a Simulator will open and the app will install automatically.
 
 ## Android
 
