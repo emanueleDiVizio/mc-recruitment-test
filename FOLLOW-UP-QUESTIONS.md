@@ -12,6 +12,10 @@ Below a list of the libraries I've added with a brief explanation of each:
 - "prop-types": Useful library to validate React prop types. Would not do without.
 - "react-native-push-notification": Very useful library to set up push notifications (remote and local) quickly and easily
 - "redux-devtools-extension": Devtools extension for redux. Useful when debugging
+- "react-native-circular-progress": Handy library to display circular progress bars.
+- "husky": Useful library to run test on git hooks. I've used it to prevent developers to commit code that breaks tests or has lint errors. Prevents a lot of issues to reach the remote repo!
+- "react-native-vector-icons": library to display vector icons
+- "react-native-svg": library to deal with SVG paths efficiently. Used by react-native-circular-progress".
 
 ### Q) How do I run the application?
 
@@ -23,21 +27,18 @@ Run `yarn android` or `yarn ios` and you're good to go (Provided you've set up d
 
 ### Q) If you had more time, what further improvements or new features would you add?
 
-I Would improve the UX/UI and would add tests for sagas and NotificationService. Although not crucial, they're useful to add if there is time to spare. I would also set up `husky` to run tests and lint on commit and push. I would then set up a proper CI pipeline to have an easier access to artifacts. As time has been quite tight, I've decided to deliver the project only with the strict necessary.
+I believe I've made good use of the time available and shipped an almost production ready codebase. If I had more time, I would have gladly implemented the rest of the features that were in the designs (which I loved! Kudos to the designer) but were not requested in the user stories.
 
 ### Q) Which parts are you most proud of? And why?
 
-I believe I've set up the architecture quite nicely and encapsulated components very well. Hooks, while presenting a learning curve, are a very useful tool and provide a nice declarative way to write components' logic. As I've used redux and sagas only when strictly, the repo is very lean and easy to understand.
+I believe that any developer that works on this codebase will enjoy doing so. The project is well architectured and it's easy to follow an established pattern to add new code. Using `fastlane` and `husky` I've set up a "local" pipeline that will take care of all the developer needs (automatic linting and testing on commit, easy deploy to the stores with `fastlane`). Github Actions makes PR come alive with information about test coverage and an easy release and pre-release deploy.
+
+I've also demonstrated the power of `hooks` by writing a custom hook to check if the user is on shift (`useIsOnShift`), which is being reused across the app. Finally, I've managed to use redux and sagas only when strictly necessary, thus keeping the codebase as simple as possible and with an easy learning curve.
 
 ### Q) Which parts did you spend the most time with? What did you find most difficult?
 
-Completing the test took me around half a day, and I haven't found any significant difficulty.
+I've spent a bit of time to set up Github Actions, as I'm more used to Circle CI but wanted to try out the new Github pipeline capabilities. All in all, I'm very impressed by the power of this new Github feature. That being said, I would go for a more robust solution in a production environment, like Bitrise or CircleCI.
 
 ### Q) How did you find the test overall? Did you have any issues or have difficulties completing? If you have any suggestions on how we can improve the test, we'd love to hear them.
 
-The test is very well designed and can provide the reviewer a very accurate view of the candidate skill set and seniority.
-Even though the requirements are simple, the candidate will have to be familiar with a lot of concepts and tooling that can be obscure to many developers. Also, much experience is necessary to piece everything together in a lean and maintainable manner.
-
-All in all, a senior engineer will have no problem completing this quickly, while a less experienced developer will struggle with some concepts (sagas, hooks, testing, architecture) and would likely need more time to piece all together.
-
-On a side note, I'd be wary of separating components bewteen "dumb components" and "smart screens" as of these days is very easy to make small functional components redux-aware through hooks, as I've demonstrated in this project. Also, I've decide to place test specs next to the file being tested, instead of keeping them all in the `__tests__` folder. Just a personal preference, yet I find it keeps thing easier to reference.
+The test is very well designed and can provide the reviewer a very accurate view of the candidate skill set and seniority. I have enjoyed the challenge and thank you for the opportunity!
