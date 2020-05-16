@@ -59,7 +59,7 @@ Inspiration for the test format taken with ❤️ from JustEat's recruitment tes
 
 # Hand Wash Timer Mobile App - Development Readme
 
-[![Coverage Status](https://coveralls.io/repos/github/emanueleDiVizio/mc-recruitment-test/badge.svg?branch=feature/coveralls)](https://coveralls.io/github/emanueleDiVizio/mc-recruitment-test?branch=feature/coveralls)![Tests](https://github.com/emanueleDiVizio/mc-recruitment-test/workflows/Tests/badge.svg) 
+[![Coverage Status](https://coveralls.io/repos/github/emanueleDiVizio/mc-recruitment-test/badge.svg?branch=master)](https://coveralls.io/github/emanueleDiVizio/mc-recruitment-test?branch=master)![Tests](https://github.com/emanueleDiVizio/mc-recruitment-test/workflows/Tests/badge.svg) 
 
 react-native repo for the Medic Bleep Hand Wash Timer mobile app
 
