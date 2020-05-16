@@ -1,6 +1,19 @@
-on: ["push", "pull_request"]
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - develop
+      - feature/**
+      - hotfix/**
+      - release/**
+      
+  pull_request:
+    branches:
+      - develop
 
-name: Test Coveralls
+
+name: Run tests and push to Coveralls
 
 jobs:
 
@@ -25,3 +38,7 @@ jobs:
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Check if android builds
+      run: |
+        cd android && ./gradlew assembleDebug
