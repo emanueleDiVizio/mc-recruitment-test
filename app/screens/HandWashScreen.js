@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import HandWashComponent from '../components/HandWash/HandWashComponent'
+import HandWash from '../components/HandWash/HandWash'
 import HandWashHistory from '../components/HandWashHistory/HandWashHistory'
 import TopBar from '../components/TopBar/TopBar'
 import ShiftController from '../components/ShiftController/ShiftController'
@@ -10,7 +10,7 @@ const HandWashScreen = () => (
     <TopBar />
     <View style={styles.interactionContainer}>
       <View style={styles.handWashContainer}>
-        <HandWashComponent />
+        <HandWash />
       </View>
       <View style={styles.shiftContainer}>
         <ShiftController />

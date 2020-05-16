@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HandWash initializes correctly 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#00A1D2",
+          "borderRadius": 100,
+          "flexDirection": "column",
+          "height": 200,
+          "justifyContent": "center",
+          "width": 200,
+        }
+      }
+      testID="timer-button"
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 60,
+            },
+            Object {
+              "marginBottom": 24,
+            },
+            Object {
+              "fontFamily": "FontAwesome5Free-Solid",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {
+              "fontWeight": "900",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 21,
+          }
+        }
+      >
+        Wash
+      </Text>
+    </>
+  </View>
+</View>
+`;

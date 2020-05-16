@@ -21,21 +21,61 @@ exports[`HandWashComponent renders correctly 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
           "flex": 1,
-          "justifyContent": "center",
         }
       }
     >
-      <Text
+      <View
         style={
           Object {
-            "flex": 1,
+            "alignItems": "flex-end",
+            "backgroundColor": "#00A778",
+            "flexDirection": "row",
+            "height": 100,
           }
         }
       >
-        Hand Wash Timer
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "flex": 1,
+              "fontSize": 17,
+              "marginBottom": 12,
+              "textAlign": "center",
+            }
+          }
+        >
+          Wash timer
+        </Text>
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontSize": 21,
+              },
+              Object {
+                "bottom": 12,
+                "flexDirection": "row",
+                "position": "absolute",
+                "right": 12,
+              },
+              Object {
+                "fontFamily": "FontAwesome5Free-Solid",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {
+                "fontWeight": "900",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
       <View
         style={
           Object {
@@ -52,21 +92,55 @@ exports[`HandWashComponent renders correctly 1`] = `
             }
           }
         >
-          <View>
-            <Text>
-              Please press the button below to start the timer
-            </Text>
-            <Button
-              disabled={false}
-              testID="timer-button"
-              title="Timer"
-            />
+          <
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#00A1D2",
+                "borderRadius": 100,
+                "flexDirection": "column",
+                "height": 200,
+                "justifyContent": "center",
+                "width": 200,
+              }
+            }
+            testID="timer-button"
+          >
             <Text
-              testID="timer-counter"
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "white",
+                    "fontSize": 60,
+                  },
+                  Object {
+                    "marginBottom": 24,
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome5Free-Solid",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {
+                    "fontWeight": "900",
+                  },
+                ]
+              }
             >
-              0
+              
             </Text>
-          </View>
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": 21,
+                }
+              }
+            >
+              Wash
+            </Text>
+          </>
         </View>
         <View
           style={
