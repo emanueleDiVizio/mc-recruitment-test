@@ -73,8 +73,8 @@ react-native repo for the Medic Bleep Hand Wash Timer mobile app
 4. Install js dependencies: `yarn install`
 5. Install native dependencies: `cd ios && pod install`
 6. Create `app/config/local.js` - local dev config that isn't committed.
-7. Start the js bundler: `react-native start`
-8. Run the project: `react-native run-ios`
+7. Start the js bundler: `yarn start` (Optional, `yarn ios` will start up a new bundler if none is active)
+8. Run the project: `yarn ios`
 
 ## Running the app locally - Android
 
@@ -82,8 +82,8 @@ react-native repo for the Medic Bleep Hand Wash Timer mobile app
 2. Make sure you've installed Android Studio, have the jdk etc. You'll likely need to create at least one emulator using the Virtual Device Manager (or have a real device connected)
 3. Install js dependencies: `yarn install`
 4. Create `app/config/local.js` - local dev config that isn't committed. Default options can be copied from `app/config/local-example.js`
-5. Start the js bundler: `react-native start`
-6. Run the project: `react-native run-android`
+5. Start the js bundler: `yarn start` (Optional, `yarn android` will start up a new bundler if none is active)
+6. Run the project: `yarn android`
 
 ## Structure
 
@@ -94,11 +94,14 @@ The bulk of the code is in the `app` directory.
 | location       | contents                                                                                                                     |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | app/App.js     | Entrypoint for the app                                                                                                       |
-| app/components | Place to keep both smart and dumb components.                                                                                |
-| app/screens    | components representing entire screens within the app, where smaller component are pieced together.                          |
+| app/components | Where components and their tests are kept.                                                                                |
+| app/screens    | Components representing entire screens within the app, where smaller component are pieced together.                          |
 | app/config     | app-wide config - things like an api host, colors, etc. Configuration of the redux store and, in dev, tools like Reactotron. |
 | app/state      | redux reducers/actions/selectors. Combined in `index.js`                                                                     |
 | app/sagas      | `redux-saga` sagas, forked from the root saga in `index.js` to run in parallel.                                              |
+| fastlane/     | Where `fastlane` configuration belongs.                                              |
+| jest/      | Global `jest` config.                                              |
+| .github/workflows      | Github Actions workflows are stored here as `.yml`                                           |
 | ios/           | Native iOS project                                                                                                           |
 | android/       | Native Android project                                                                                                       |
 
@@ -119,7 +122,7 @@ Global app config is in `app/config/index.js`. There are some defaults which are
 | `defaultTimerDelay`                  | Default delay for the handwash timer (1s)                         |
 | `defaultTimerTimeoutInSeconds`       | Default timeout for handwash timer (20s as recommended by medics) |
 | `defaultShiftDurationInHours`        | Default user shift duration (8 hrs)                               |
-| `defaultDateFormatString`            | Default formatter to show dates (`dddd, MMMM Do YYYY, h:mm:ss a)  |
+| `headerTitle`        | Default title for main screen header. (`Wash Timer`)                            |
 | `defaultNotificationIntervalInHours` | Default interval between notifications (2 hrs)                    |
 
 ## Redux
@@ -149,12 +152,12 @@ We use `prettier` for code formatting.
 
 # Build & Deploy
 
-I've set up `fastlane` is set up to delvier to `TestFlight` and `PlayStore` beta tracks. There is a Github Action that triggers this pipeline on every push and PR to master. It will not work as there are no credentials set to deliver to the stores, as it is not necessary for the sake of the test. In a production scenario, those guides should be followed to set up Keys and Certificates for [Android](https://shift.infinite.red/simple-react-native-android-releases-319dc5e29605) and [iOs](https://docs.fastlane.tools/actions/match/#setup).  Follow the steps below to deploy a `debug` version to a local device
+I've set up `fastlane` to deliver the app to `TestFlight` and `PlayStore` beta tracks. There is a Github Action that triggers this pipeline on every push and PR to master. It will not work as there are no credentials set to deliver to the stores, as it is not necessary for the sake of the test. In a production scenario, those guides should be followed to set up Keys and Certificates for [Android](https://shift.infinite.red/simple-react-native-android-releases-319dc5e29605) and [iOs](https://docs.fastlane.tools/actions/match/#setup).  Follow the steps below to deploy a `debug` version to a local device
 
 ## iOS
 
-Run`yarn ios`, a Simulator will open and the app will install automatically.
+Running `yarn ios` will open a `js bundler` and a Simulator on which the app will install automatically.
 
 ## Android
 
-Open the emulator and run `yarn android`, the app will install automatically.
+Open the emulator and run `yarn android`, a `js bundler` will start and the app will install automatically on the emulator.

@@ -13,9 +13,10 @@ Below a list of the libraries I've added with a brief explanation of each:
 - "react-native-push-notification": Very useful library to set up push notifications (remote and local) quickly and easily
 - "redux-devtools-extension": Devtools extension for redux. Useful when debugging
 - "react-native-circular-progress": Handy library to display circular progress bars.
-- "husky": Useful library to run test on git hooks. I've used it to prevent developers to commit code that breaks tests or has lint errors. Prevents a lot of issues to reach the remote repo!
+- "husky": Useful library to run scripts on git hooks. I've used it to prevent developers to commit code that breaks tests or has lint errors. Prevents a lot of issues to reach the remote repo!
 - "react-native-vector-icons": library to display vector icons
 - "react-native-svg": library to deal with SVG paths efficiently. Used by react-native-circular-progress".
+- "fastlane": Is used to set up a local CI/CD pipeline.
 
 ### Q) How do I run the application?
 
@@ -27,11 +28,11 @@ Run `yarn android` or `yarn ios` and you're good to go (Provided you've set up d
 
 ### Q) If you had more time, what further improvements or new features would you add?
 
-I believe I've made good use of the time available and shipped an almost production ready codebase. If I had more time, I would have gladly implemented the rest of the features that were in the designs (which I loved! Kudos to the designer) but were not requested in the user stories. I would also add unit tests for `sagas`, `reducers` and `NotificationService`. As they're not crucial, I've decided to do without for the sake of the test project. In a production environment I would probably write them before shipping if time allows.
+I believe I've made good use of the time available and shipped an almost production ready codebase. If I had more time, I would have gladly implemented the rest of the features that were in the designs (which I loved! Kudos to the designer) but were not requested in the user stories. Also, I would have implemented logic to cancel pending notifications if the user has ended the shift. I would then add unit tests for `sagas`, `reducers` and `NotificationService`. I've decided to do without for the sake of the test project as they are not strictly necessary. However, in a production environment I would prefer write them before shipping.
 
 ### Q) Which parts are you most proud of? And why?
 
-I believe that any developer that works on this codebase will enjoy doing so. The project is well architectured and it's easy to follow an established pattern to add new code. Using `fastlane` and `husky` I've set up a "local" pipeline that will take care of all the developer needs (automatic linting and testing on commit, easy deploy to the stores with `fastlane`). Github Actions makes PR come alive with information about test coverage and an easy release and pre-release deploy.
+I believe that any developer that works on this codebase will enjoy doing so. The project is well architectured and it's easy to follow an established pattern to add new code. Using `fastlane` and `husky` I've set up a "local" pipeline that will take care of all the developer needs (automatic linting and testing on commit, easy deployment to the stores with `fastlane`). Github Actions makes PR come alive with information about test coverage and an easy release and pre-release deploy.
 
 I've also demonstrated the power of `hooks` by writing a custom hook to check if the user is on shift (`useIsOnShift`), which is being reused across the app. Finally, I've managed to use redux and sagas only when strictly necessary, thus keeping the codebase as simple as possible and with an easy learning curve.
 
